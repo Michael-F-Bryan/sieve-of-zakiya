@@ -19,11 +19,15 @@ impl PrimeGenerator {
         }
     }
 
+    /// The list of primes which this `PrimeGenerator` will miss.
+    ///
     /// The list of `excluded_primes` contains all primes smaller than the
     /// first residual. Therefore to correctly do a prime sieve, you need
     /// to combine the primes found by sieving this prime generator with
-    /// the list of primes it skips (`excluded_primes`). Because this list
-    /// is very small, we just calculate it using brute force.
+    /// the list of primes it skips (`excluded_primes`).
+    ///
+    /// Because this list is very small, we just calculate it using brute
+    /// force.
     pub fn excluded_primes(&self) -> Vec<usize> {
         let first_residue = self.residues.iter().find(|n| **n > 1).unwrap().clone();
         (2..first_residue)

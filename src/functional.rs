@@ -4,7 +4,7 @@ pub fn sieve_of_zakiya(upper_limit: usize, modulus: usize) -> Vec<usize> {
     let generator = PrimeGenerator::new(modulus);
 
     let residues = generator.residues().to_vec();
-    let excluded_primes = generator.excluded_primes().to_vec();
+    let excluded_primes = generator.excluded_primes();
 
     // this can be done really easily in parallel...
     //
