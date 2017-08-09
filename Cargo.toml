@@ -1,0 +1,8 @@
+[package]
+authors = ["Michael Bryan <michaelfbryan@gmail.com>"]
+name = "sieve-of-zakiya"
+version = "0.1.0"
+[dependencies]
+
+[dev-dependencies]
+pretty_assertions = "0.2.1"
